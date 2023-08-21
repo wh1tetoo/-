@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食谱调整器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .column {
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th, td {
+            padding: 5px;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <h2>食谱调整器</h2>
+            <table>
+                 <tr>
+                    <td>面粉</td>
+                    <td><input type="number" id="original面粉" data-ingredient="面粉" placeholder="原用量（单位：克）"></td>
+                </tr>
+                <tr>
+                    <td>水</td>
+                    <td><input type="number" id="original水" data-ingredient="水" placeholder="原用量"></td>
+                </tr>   
+                <tr>
+                    <td>酵母</td>
+                    <td><input type="number" id="original酵母" data-ingredient="酵母" placeholder="原用量"></td>
+                </tr>             
+                 <tr>
+                    <td>奶粉</td>
+                    <td><input type="number" id="original奶粉" data-ingredient="奶粉" placeholder="原用量"></td>
+                </tr>
+                <tr>
+                    <td>黄油</td>
+                    <td><input type="number" id="original黄油" data-ingredient="黄油" placeholder="原用量"></td>
+                </tr>
+                <tr>
+                    <td>红糖</td>
+                    <td><input type="number" id="original红糖" data-ingredient="红糖" placeholder="原用量"></td>
+                </tr>
+                <tr>
+                    <td>白糖</td>
+                    <td><input type="number" id="original白糖" data-ingredient="白糖" placeholder="原用量"></td>
+                </tr>
+                <tr>
+                    <td>鸡蛋</td>
+                    <td><input type="number" id="original鸡蛋" data-ingredient="鸡蛋" placeholder="原用量"></td>
+                </tr>
+                <tr>
+                    <td>盐</td>
+                    <td><input type="number" id="original盐" data-ingredient="盐" placeholder="原用量"></td>
+                </tr>
+                <tr>
+                    <td>小苏打</td>
+                    <td><input type="number" id="original小苏打" data-ingredient="小苏打" placeholder="原用量"></td>
+                </tr>
+                <tr>
+                    <td>泡打粉</td>
+                    <td><input type="number" id="original泡打粉" data-ingredient="泡打粉" placeholder="原用量"></td>
+                </tr>
+                <tr>
+                    <td>巧克力</td>
+                    <td><input type="number" id="original巧克力" data-ingredient="巧克力" placeholder="原用量"></td>
+                </tr>
+                <tr>
+                    <td>坚果</td>
+                    <td><input type="number" id="original坚果" data-ingredient="坚果" placeholder="原用量"></td>
+                </tr>
+                <tr>
+                    <td>材料A</td>
+                    <td><input type="number" id="original材料A" data-ingredient="材料A" placeholder="原用量"></td>
+                </tr>
+                <tr>
+                    <td>材料B</td>
+                    <td><input type="number" id="original材料B" data-ingredient="材料B" placeholder="原用量"></td>
+                </tr>
+                <tr>
+                    <td>材料C</td>
+                    <td><input type="number" id="original材料C" data-ingredient="材料C" placeholder="原用量"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="column">
+            <h2>调整面粉和生成食谱</h2>
+            <input type="number" id="adjustedFlour" placeholder="调整后的面粉用量">
+            <button onclick="generateAdjustedRecipe()">生成调整后的食谱</button>
+        </div>
+        <div class="column">
+            <h2>调整后的食谱</h2>
+            <table id="adjustedTable">
+                <tr>
+                    <th>原材料</th>
+                    <th>用量</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
